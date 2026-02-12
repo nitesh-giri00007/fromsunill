@@ -1,0 +1,871 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niruta💎, Will You Be My Valentine? - Sunil🫀's Proposal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 25%, #fecfef 50%, #fad0c4 75%, #ff9a9e 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hearts-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-heart {
+    position: absolute;
+    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    animation: float 6s ease-in-out infinite;
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating-heart:nth-child(1) {
+    left: 10%;
+    top: 20%;
+    animation-delay: 0s;
+}
+
+.floating-heart:nth-child(2) {
+    left: 80%;
+    top: 10%;
+    animation-delay: 1s;
+}
+
+.floating-heart:nth-child(3) {
+    left: 15%;
+    top: 70%;
+    animation-delay: 2s;
+}
+
+.floating-heart:nth-child(4) {
+    left: 85%;
+    top: 80%;
+    animation-delay: 3s;
+}
+
+.floating-heart:nth-child(5) {
+    left: 50%;
+    top: 5%;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(-20px) rotate(10deg);
+        opacity: 1;
+    }
+}
+
+.proposal-card {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    border: 4px solid rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    padding: 3rem;
+    box-shadow: 0 25px 50px rgba(255, 154, 158, 0.3), 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    max-height: 85vh;
+    width: 90%;
+    height: auto;
+    aspect-ratio: 1/1.3;
+    z-index: 10;
+    position: relative;
+    animation: slideIn 1s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #e91e63;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.message p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.message p:nth-child(1) { animation-delay: 0.2s; }
+.message p:nth-child(2) { animation-delay: 0.4s; }
+.message p:nth-child(3) { animation-delay: 0.6s; }
+.message p:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.final-question {
+    font-weight: 600;
+    color: #e91e63;
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    width: 120px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.yes-btn {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    color: white;
+    box-shadow: 0 4px 15px rgba(238, 90, 36, 0.4);
+}
+
+.yes-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(238, 90, 36, 0.6);
+}
+
+.no-btn {
+    background: linear-gradient(135deg, #a8a8a8, #7f8c8d);
+    color: white;
+    box-shadow: 0 4px 15px rgba(127, 140, 141, 0.4);
+}
+
+.no-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(127, 140, 141, 0.6);
+}
+
+.response {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    padding: 3rem;
+    border-radius: 25px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border: 4px solid transparent;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    min-width: 400px;
+    max-width: 90vw;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(20px);
+}
+
+.response.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.response.yes {
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.95), rgba(238, 90, 36, 0.95));
+    color: white;
+    border: 4px solid #ff4d6d;
+    box-shadow: 0 15px 35px rgba(255, 77, 109, 0.6), 0 0 50px rgba(255, 77, 109, 0.3);
+    animation: romanticGlow 2s ease-in-out infinite alternate;
+}
+
+.response.no {
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+    color: white;
+    border: 3px solid #7f8c8d;
+    box-shadow: 0 10px 25px rgba(127, 140, 141, 0.4);
+}
+
+.fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.firework {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: firework 1s ease-out forwards;
+}
+
+@keyframes firework {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes romanticGlow {
+    0% {
+        box-shadow: 0 15px 35px rgba(255, 77, 109, 0.6), 0 0 50px rgba(255, 77, 109, 0.3);
+        border-color: #ff4d6d;
+    }
+    50% {
+        box-shadow: 0 20px 45px rgba(255, 77, 109, 0.8), 0 0 70px rgba(255, 77, 109, 0.5);
+        border-color: #ff6b9d;
+    }
+    100% {
+        box-shadow: 0 15px 35px rgba(255, 77, 109, 0.6), 0 0 50px rgba(255, 77, 109, 0.3);
+        border-color: #ff4d6d;
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes fadeInOverlay {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .proposal-card {
+        padding: 2rem;
+        margin: 10px;
+        width: 95%;
+        max-width: none;
+        aspect-ratio: auto;
+        min-height: auto;
+    }
+    
+    .title {
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .message p {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .final-question {
+        font-size: 1.1rem;
+        margin-top: 1rem;
+    }
+    
+    .buttons {
+        gap: 1rem;
+        margin-top: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+        width: 140px;
+        height: 45px;
+    }
+    
+    .response {
+        padding: 1.5rem;
+        font-size: 1.1rem;
+        min-height: 120px;
+    }
+    
+    .floating-heart {
+        font-size: 1.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 480px) {
+    .proposal-card {
+        padding: 1.5rem;
+        margin: 5px;
+        border-radius: 20px;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .message p {
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .final-question {
+        font-size: 1rem;
+        margin-top: 0.8rem;
+    }
+    
+    .btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+        width: 120px;
+        height: 40px;
+    }
+    
+    .response {
+        padding: 1rem;
+        font-size: 1rem;
+        min-height: 100px;
+    }
+    
+    .floating-heart {
+        font-size: 1.2rem;
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+}
+
+/* Large Desktop Screens */
+@media (min-width: 1200px) {
+    .proposal-card {
+        max-width: 600px;
+        padding: 4rem;
+    }
+    
+    .title {
+        font-size: 3.5rem;
+    }
+    
+    .message p {
+        font-size: 1.3rem;
+    }
+    
+    .final-question {
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.2rem;
+        width: 140px;
+        height: 55px;
+    }
+    
+    .response {
+        font-size: 1.4rem;
+        padding: 2.5rem;
+        min-height: 180px;
+    }
+    
+    .floating-heart {
+        font-size: 2.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+/* Ultra-wide Screens */
+@media (min-width: 1600px) {
+    .proposal-card {
+        max-width: 700px;
+        padding: 5rem;
+    }
+    
+    .title {
+        font-size: 4rem;
+    }
+    
+    .message p {
+        font-size: 1.4rem;
+    }
+    
+    .final-question {
+        font-size: 1.6rem;
+    }
+}
+
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hearts-container">
+            <div class="floating-heart">❤️</div>
+            <div class="floating-heart">💕</div>
+            <div class="floating-heart">💖</div>
+            <div class="floating-heart">💗</div>
+            <div class="floating-heart">💝</div>
+        </div>
+        
+        <div class="proposal-card">
+            <h1 class="title">Niruta💎, Will You Be My Valentine?</h1>
+            
+            <div class="message">
+                <p>Dear Niruta💎, every moment with you feels like magic</p>
+                <p>Your smile lights up Sunil🫀's world like a thousand stars</p>
+                <p>Timro muskaan dekhera mero din subha bhanchha</p>
+                <p>Being with you makes everything better</p>
+                <p>Jastai Muna ra Madan, hamro premkatha anant chha</p>
+                <p>Jastai Madan le Muna lai chayeko, Sunil🫀 le Niruta💎 lai chayeko chha</p>
+                <p class="final-question">So... will you be my Sita? 💕</p>
+            </div>
+            
+            <div class="buttons">
+                <button class="btn yes-btn" id="yesBtn">Yes! 💖</button>
+                <button class="btn no-btn" id="noBtn">No 💔</button>
+            </div>
+            
+            <div class="response" id="response"></div>
+        </div>
+        
+        <div class="fireworks" id="fireworks"></div>
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    const response = document.getElementById('response');
+    const fireworks = document.getElementById('fireworks');
+    
+    yesBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        console.log('Yes button clicked!'); // Debug log
+        showYesResponse();
+        createFireworks();
+        celebrate();
+    });
+    
+    noBtn.addEventListener('click', function() {
+        showNoResponse();
+        moveNoButton();
+    });
+    
+    // Make the No button run away from mouse
+    noBtn.addEventListener('mouseenter', function() {
+        runawayFromMouse();
+    });
+    
+    // Reset button text when mouse leaves
+    noBtn.addEventListener('mouseleave', function() {
+        noBtn.textContent = 'No 💔';
+        noBtn.style.transform = 'scale(1)';
+    });
+    
+    function showYesResponse() {
+        console.log('Yes button clicked!'); // Debug log
+        
+        // Create romantic background overlay
+        const overlay = document.createElement('div');
+        overlay.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(255, 77, 109, 0.1) 0%, rgba(255, 107, 107, 0.05) 50%, transparent 100%);
+            z-index: 999;
+            pointer-events: none;
+            animation: fadeInOverlay 1s ease-out forwards;
+        `;
+        document.body.appendChild(overlay);
+        
+        response.innerHTML = `
+            <div class="yes-response">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem; animation: heartbeat 1s ease-in-out infinite;">💖 YAY Niruta💎! 💖</h2>
+                <p style="font-size: 1.2rem; margin: 0.5rem 0;">You made Sunil🫀 the happiest person!</p>
+                <p style="font-size: 1.2rem; margin: 0.5rem 0;">Timro muskaan dekhi ma har din premma badhchhu</p>
+                <p style="font-size: 1.2rem; margin: 0.5rem 0;">Hamro premkatha shuru bhayo, jastai Muna ra Madan ko anant katha</p>
+                <p style="font-size: 1.2rem; margin: 0.5rem 0;">Sunil🫀 can't wait to spend Valentine's Day with you!</p>
+                <p style="font-size: 1.3rem; margin: 1rem 0; font-weight: bold; animation: heartbeat 1.5s ease-in-out infinite;">❤️ Sunil🫀 loves you forever! ❤️</p>
+            </div>
+        `;
+        
+        // Remove existing classes and add new ones
+        response.classList.remove('no', 'show');
+        response.classList.add('yes', 'show');
+        
+        // Hide buttons after response
+        yesBtn.style.display = 'none';
+        noBtn.style.display = 'none';
+        
+        console.log('Response shown:', response.className); // Debug log
+    }
+    
+    function showNoResponse() {
+        const messages = [
+            "Niruta💎, are you sure? 💔",
+            "Think again Niruta💎! 🥺",
+            "Sunil🫀's heart is breaking... 💔",
+            "Please reconsider Niruta💎! 🥺",
+            "Sunil🫀 will be so sad... 😢",
+            "Don't break Sunil🫀's heart! 💔"
+        ];
+        
+        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+        
+        response.innerHTML = `
+            <div class="no-response">
+                <p>${randomMessage}</p>
+            </div>
+        `;
+        response.className = 'response no show';
+        
+        // Hide response after 2 seconds
+        setTimeout(() => {
+            response.className = 'response';
+        }, 2000);
+    }
+    
+    function runawayFromMouse() {
+        const maxX = window.innerWidth - noBtn.offsetWidth - 20;
+        const maxY = window.innerHeight - noBtn.offsetHeight - 20;
+        
+        // Get current mouse position (approximate)
+        const mouseX = window.innerWidth / 2;
+        const mouseY = window.innerHeight / 2;
+        
+        // Calculate position far from mouse
+        let newX, newY;
+        
+        // Try to place button on opposite side of screen from mouse
+        if (mouseX < window.innerWidth / 2) {
+            newX = maxX - Math.random() * 100;
+        } else {
+            newX = Math.random() * 100;
+        }
+        
+        if (mouseY < window.innerHeight / 2) {
+            newY = maxY - Math.random() * 100;
+        } else {
+            newY = Math.random() * 100;
+        }
+        
+        noBtn.style.position = 'fixed';
+        noBtn.style.left = newX + 'px';
+        noBtn.style.top = newY + 'px';
+        noBtn.style.zIndex = '1000';
+        noBtn.style.transition = 'all 0.3s ease';
+        
+        // Change button text to something funny
+        const funnyTexts = [
+            "Can't catch me! 😏",
+            "Too slow! 🏃‍♂️",
+            "Try again! 😝",
+            "Nope! 🙅‍♀️",
+            "Run away! 💨",
+            "Missed me! 😎",
+            "Too fast! ⚡",
+            "Not today! 😈"
+        ];
+        noBtn.textContent = funnyTexts[Math.floor(Math.random() * funnyTexts.length)];
+        
+        // Add a little shake animation and scale
+        noBtn.style.animation = 'shake 0.5s';
+        noBtn.style.transform = 'scale(1.1)';
+        setTimeout(() => {
+            noBtn.style.animation = '';
+            noBtn.style.transform = 'scale(1)';
+        }, 500);
+    }
+    
+    function moveNoButton() {
+        const maxX = window.innerWidth - noBtn.offsetWidth - 20;
+        const maxY = window.innerHeight - noBtn.offsetHeight - 20;
+        
+        const randomX = Math.random() * maxX;
+        const randomY = Math.random() * maxY;
+        
+        noBtn.style.position = 'fixed';
+        noBtn.style.left = randomX + 'px';
+        noBtn.style.top = randomY + 'px';
+        noBtn.style.zIndex = '1000';
+        
+        // Add some fun text to the no button
+        const noTexts = [
+            "No 💔",
+            "Never! 💔", 
+            "Nope! 💔",
+            "Can't! 💔",
+            "Sorry! 💔"
+        ];
+        noBtn.textContent = noTexts[Math.floor(Math.random() * noTexts.length)];
+    }
+    
+    function createFireworks() {
+        const colors = ['#ff6b6b', '#ee5a24', '#feca57', '#ff9ff3', '#54a0ff', '#48dbfb'];
+        
+        for (let i = 0; i < 50; i++) {
+            setTimeout(() => {
+                createFirework(colors);
+            }, i * 100);
+        }
+    }
+    
+    function createFirework(colors) {
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight;
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        
+        for (let i = 0; i < 30; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'firework';
+            particle.style.left = x + 'px';
+            particle.style.top = y + 'px';
+            particle.style.background = color;
+            
+            const angle = (Math.PI * 2 * i) / 30;
+            const velocity = 50 + Math.random() * 50;
+            const vx = Math.cos(angle) * velocity;
+            const vy = Math.sin(angle) * velocity;
+            
+            particle.style.transform = `translate(${vx}px, ${vy}px)`;
+            
+            fireworks.appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 1000);
+        }
+    }
+    
+    function celebrate() {
+        // Create floating hearts
+        for (let i = 0; i < 20; i++) {
+            setTimeout(() => {
+                createFloatingHeart();
+            }, i * 200);
+        }
+        
+        // Play a celebration sound effect (if you want to add audio)
+        // const audio = new Audio('celebration.mp3');
+        // audio.play();
+    }
+    
+    function createFloatingHeart() {
+        const heart = document.createElement('div');
+        heart.innerHTML = ['❤️', '💕', '💖', '💗', '💝'][Math.floor(Math.random() * 5)];
+        heart.style.position = 'fixed';
+        heart.style.left = Math.random() * window.innerWidth + 'px';
+        heart.style.bottom = '-50px';
+        const size = (2 + Math.random() * 2);
+        heart.style.fontSize = size + 'rem';
+        heart.style.width = size + 'rem';
+        heart.style.height = size + 'rem';
+        heart.style.zIndex = '1000';
+        heart.style.pointerEvents = 'none';
+        heart.style.display = 'flex';
+        heart.style.alignItems = 'center';
+        heart.style.justifyContent = 'center';
+        heart.style.animation = 'floatUp 4s ease-out forwards';
+        
+        document.body.appendChild(heart);
+        
+        setTimeout(() => {
+            heart.remove();
+        }, 4000);
+    }
+    
+    // Add floating up animation
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg) scale(1);
+                opacity: 0.7;
+            }
+            50% {
+                transform: translateY(-20px) rotate(10deg) scale(1.1);
+                opacity: 1;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+    
+    // Add shake animation
+    const shakeStyle = document.createElement('style');
+    shakeStyle.textContent = `
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px) rotate(-5deg); }
+            75% { transform: translateX(10px) rotate(5deg); }
+        }
+    `;
+    document.head.appendChild(shakeStyle);
+    
+    // Add some ambient floating hearts
+    setInterval(() => {
+        if (Math.random() > 0.7) {
+            createAmbientHeart();
+        }
+    }, 3000);
+    
+    function createAmbientHeart() {
+        const heart = document.createElement('div');
+        heart.innerHTML = ['❤️', '💕'][Math.floor(Math.random() * 2)];
+        heart.style.position = 'fixed';
+        heart.style.left = Math.random() * window.innerWidth + 'px';
+        heart.style.top = '-50px';
+        heart.style.fontSize = '1.5rem';
+        heart.style.width = '1.5rem';
+        heart.style.height = '1.5rem';
+        heart.style.zIndex = '1';
+        heart.style.pointerEvents = 'none';
+        heart.style.opacity = '0.6';
+        heart.style.display = 'flex';
+        heart.style.alignItems = 'center';
+        heart.style.justifyContent = 'center';
+        heart.style.animation = 'fallDown 8s linear forwards';
+        
+        document.body.appendChild(heart);
+        
+        setTimeout(() => {
+            heart.remove();
+        }, 8000);
+    }
+    
+    // Add falling down animation
+    const fallStyle = document.createElement('style');
+    fallStyle.textContent = `
+        @keyframes fallDown {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    `;
+    document.head.appendChild(fallStyle);
+});
+
+    </script>
+</body>
+</html>
